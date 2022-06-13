@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-image: linear-gradient(rgb(231, 253, 30),rgb(58, 216, 58));
+    background-repeat: no-repeat;
+    padding: 10px;
+
+}
+.jogadores{
+    width: auto;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.campo{
+    background-image: url(img/campo.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 346px;
+    height: 500px;
+    border: 1px solid black;
+    position: relative;
+}
+.player{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5px;
+    background-color: rgb(224, 224, 224);
+    text-align: center;
+    height: auto;
+    border-radius: 4px;
+    padding: 0px 10px ;
+}
+.area{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: rgba(204, 204, 204, 0.6);
+}
+#goleiro{
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%,0%);
+}
+#lateral-e{
+    position: absolute;
+    left: 8%;
+    bottom: 25%;
+}
+#zagueiro-e{
+    position: absolute;
+    left: 30%;
+    bottom: 20%;
+}
+#zagueiro-d{
+    position: absolute;
+    right: 30%;
+    bottom: 20%;
+}
+#lateral-d{
+    position: absolute;
+    right: 8%;
+    bottom: 25%;
+}
+#meio-campo-e{
+    position: absolute;
+    left: 12%;
+    bottom: 45%;
+}
+#meio-campo-c{
+    position: absolute;
+    right: 50%;
+    bottom: 60%;
+    transform: translate(50%,0%);
+}
+#meio-campo-d{
+    position: absolute;
+    right: 12%;
+    bottom: 45%;
+}
+#atacante-e{
+    position: absolute;
+    left: 10%;
+    bottom: 80%;
+}
+#atacante-c{
+    position: absolute;
+    left: 50%;
+    bottom: 85%;
+    transform: translate(-50%,0%);
+}
+#atacante-d{
+    position: absolute;
+    right: 10%;
+    bottom: 80%;
+}
+
+
+
+.escalado{
+    background-image: url(img/player.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-weight: bolder;
+    position: relative;
+}
+.escalado p {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80px;
+    font-size: 14px;
+    position: absolute;
+    bottom: -50%;
+    text-align: center;
+}
+
+.dragging {
+    opacity: 0.2;
+}
+.hover{
+    background-color: #999;
+}
+#alerta{
+    display: none;
+}
+@media(max-width:600px){
+    .campo {
+        display: none;
+    }
+    .jogadores {
+        display: none;
+    }
+    #alerta{
+        color: red;
+        display: block;
+    }
+}
